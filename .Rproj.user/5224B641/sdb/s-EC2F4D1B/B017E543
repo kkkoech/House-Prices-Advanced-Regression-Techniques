@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1516053716213.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B017E543",
+    "lastKnownWriteTime" : 1516053730,
+    "last_content_update" : 1516053730626,
+    "path" : "~/GitHub/House-Prices-Advanced-Regression-Techniques/models.R",
+    "project_path" : "models.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

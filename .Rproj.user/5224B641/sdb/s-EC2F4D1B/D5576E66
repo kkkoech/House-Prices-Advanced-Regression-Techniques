@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Do a filter of more significant variables:\nThey seem to be: \n  MSSubClass: Type of dwelling. Of Course.\n  MSZoning: General zoning classification of sale\n  LotFrontage: Linear feet of street connected to property\n  Lot Area: Lot size\n  *Combine Street and Alley to \"Access\"\n  LotShape\n  *Combine LandContour with LandSlope to \"LandContour\"\n  Utilities\n  LotConfig: Lot Configuration\n  Neighborhood\n  Condition1 \n  Condition2\n  BldgType: Type of building\n  HouseStyle: Style of dwelling\n  OverallQual: Material and finish\n  OverallCond: Condition of house\n  YerBuilt\n  YearRemodAdd\n  RoofStyle: Type of roof\n  RoofMatl: Roof Material\n  Exterior1st: Exter\n  Exterior2nd\n  MasVnrArea: Masonry Veneer type\n  ExterQual: Qauality of material on the exterior\n  ExteriorCond: Present condition of material on exterior\n  Foundation: TYpe of foundation\n  BsmtQual: Height of basement\n  BsmtExposure: Walkout/Garden-level walls\n  \n  \n  \n\n\n\n\n\n1. Do a little bit more work on the Exterior covering on house (Focus: Asbestos observation)\n",
+    "created" : 1516031635520.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2231971060",
+    "id" : "D5576E66",
+    "lastKnownWriteTime" : 1516053699,
+    "last_content_update" : 1516053699879,
+    "path" : "~/GitHub/House-Prices-Advanced-Regression-Techniques/notes.txt",
+    "project_path" : "notes.txt",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

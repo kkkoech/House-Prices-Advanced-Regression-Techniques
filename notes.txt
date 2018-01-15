@@ -1,0 +1,39 @@
+Do a filter of more significant variables:
+They seem to be: 
+  MSSubClass: Type of dwelling. Of Course.
+  MSZoning: General zoning classification of sale
+  LotFrontage: Linear feet of street connected to property
+  Lot Area: Lot size
+  *Combine Street and Alley to "Access"
+  LotShape
+  *Combine LandContour with LandSlope to "LandContour"
+  Utilities
+  LotConfig: Lot Configuration
+  Neighborhood
+  Condition1 
+  Condition2
+  BldgType: Type of building
+  HouseStyle: Style of dwelling
+  OverallQual: Material and finish
+  OverallCond: Condition of house
+  YerBuilt
+  YearRemodAdd
+  RoofStyle: Type of roof
+  RoofMatl: Roof Material
+  Exterior1st: Exter
+  Exterior2nd
+  MasVnrArea: Masonry Veneer type
+  ExterQual: Qauality of material on the exterior
+  ExteriorCond: Present condition of material on exterior
+  Foundation: TYpe of foundation
+  BsmtQual: Height of basement
+  BsmtExposure: Walkout/Garden-level walls
+  
+  
+  
+
+
+
+
+
+1. Do a little bit more work on the Exterior covering on house (Focus: Asbestos observation)

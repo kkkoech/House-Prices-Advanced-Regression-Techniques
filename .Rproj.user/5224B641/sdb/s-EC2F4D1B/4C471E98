@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "load(train)\n\ndf <- read.csv(\"data/train.csv\", header = T)\ntest <- read.csv(\"data/test.csv\", header = T, sep)\ntrain <- read.csv(\"data/train.csv\", header = T)\nstr(df)\nnames(df)\n\n\n#Dealing with missing values\n\n#1. LotFrontage\nsum(is.na(df$LotFrontage))\n#Scatter plot for possible linear relationship\nscatter.smooth(y=df$LotFrontage, x=df$LotArea, main = \"LotFrontage~LotArea\")\n\n#Outliers\npar(mfrow=c(1, 2))  # divide graph area in 2 columns\nboxplot(df$LotFrontage, main=\"LotFrontage\", sub=paste(\"Outlier rows: \", boxplot.stats(df$LotFrontage)$out)) \nboxplot(df$LotArea, main=\"LotArea\", sub=paste(\"Outlier rows: \", boxplot.stats(df$LotArea)$out))  \n\n#Density plot to check for closeness of the \"response variable\" to normality.\nlibrary(e1071)\n\npar(mfrow=c(1,2))\nplot(density(df$LotFrontage), main=\"LotFrontage\", \n     ylab=\"Frequency\", sub=paste(\"Skewness:\", round(e1071::skewness(df$LotFrontage), 2)))\nplot(density(df$LotFrontage), col=\"green\")\nplot(density(df$LotArea), main=\"LotArea\", \n     ylab=\"Frequency\", sub=paste(\"Skewness:\", round(e1071::skewness(df$LotArea), 2)))\nplot(density(df$LotArea), col=\"green\")\n\n#Correlation to measure linear dependence between LotArea and LotFrontage\nlibrary(GGally)\nggcorr(df, label=T)\n\n#Linear Model?\nlm_LotFrontage <- lm(LotFrontage ~ LotArea, data=df)\n#LotFrontagePredictions <- predict(lm_LotFrontage, df)\n#LotFrontageNAs <- df$LotFrontage[is.na(df$LotFrontage)]\nlm_LotFrontage #LotFrontage = 57.055042 + 0.001306*LotArea \n\nLotFrontage2 <- (57.055042 + 0.001306 * df$LotArea)\n\n#df$LotFrontage[is.na(df$LotFrontage)] <- 57.055042 + (0.001306 * df$LotArea)\n#Finding errors\n\n#2. Alley, PoolQC, Fence, MiscFeature, FireplaceQuality\n#Too many missing observations. I'll get rid of them\ndf$LotFrontage <- NULL\ndf$Alley <- NULL\ndf$PoolQC <- NULL\ndf$Fence <- NULL\ndf$MiscFeature <- NULL\ndf$FireplaceQu <- NULL\n\n\n\n",
+    "created" : 1516031994274.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2144448611",
+    "id" : "4C471E98",
+    "lastKnownWriteTime" : 1516053930,
+    "last_content_update" : 1516053930042,
+    "path" : "~/GitHub/House-Prices-Advanced-Regression-Techniques/data_management.R",
+    "project_path" : "data_management.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
